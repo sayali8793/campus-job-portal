@@ -1,0 +1,49 @@
+USER:
+{
+  "fullname": "Sayali Patil",
+  "email": "sayali@gmail.com",
+  "phoneNumber": 9876543210,
+  "password": "123456",
+  "role": "student"
+}
+
+{
+    "fullname": "Rahul Sharma",
+    "email": "rahul@gmail.com",
+     "phoneNumber": 9882344556,
+    "password": "$2b$10$",
+    "role": "student",
+    "skills": ["Java", "Spring Boot"],
+    "resume": "rahul_resume.pdf"
+  }
+
+    {
+    "fullname": "Rajesh Sharma",
+    "email": "rajesh@gmail.com",
+    "phoneNumber": 9123456789,
+    "password": "$2b$100",
+    "role": "student",
+    "profile": {
+      "bio": "Java backend developer",
+      "skills": ["Java", "Spring Boot", "MySQL"],
+      "resume": "https://cloudinary.com/resumes/rajesh_resume.pdf",
+      "resumeOriginalName": "Rajesh_Sharma_Resume.pdf",
+      "company": null,
+      "profilePhoto": ""
+    }}
+
+    {
+    "fullname": "Anita Deshmukh",
+    "email": "anita@techsoft.com",
+    "phoneNumber": 9988776655,
+    "password": "$2btt89",
+    "role": "recruiter",
+    "profile": {
+      "bio": "HR Manager at TechSoft Solutions",
+      "skills": ["Hiring", "Recruitment", "Interviewing"],
+      "resume": "",
+      "resumeOriginalName": "",
+      "company": "65b1a1c9f1a2b34567890123",
+      "profilePhoto": "https://cloudinary.com/profile/anita.jpg"
+    }
+ }
