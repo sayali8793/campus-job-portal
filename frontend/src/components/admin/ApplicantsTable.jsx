@@ -53,7 +53,7 @@ const ApplicantsTable = () => {
                                     }
                                 </TableCell>
                                 {/* <TableCell>{item?.applicant.createdAt.split("T")[0]}</TableCell> */}
-                                <TableCell>{item?.applicant?.createdAt ? item.applicant.createdAt.split("T")[0] : 'N/A'}</TableCell>                                <TableCell className="float-right cursor-pointer">
+                                <TableCell>{item?.applicant?.createdAt && item.applicant.createdAt.split("T")[0] }</TableCell>                                <TableCell className="float-right cursor-pointer">
                                     <Popover>
                                         <PopoverTrigger>
                                             <MoreHorizontal />
