@@ -43,10 +43,7 @@ const FilterCard = () => {
                                 data.array.map((item, idx) => {
                                     const itemId = `id${index}-${idx}`
 
-                                    if (selectedValue.includes("-")) {
-                                        const [min, max] = selectedValue.split("-").map(Number);
-                                         return job.salary >= min && job.salary <= max;
-                                    }
+                                    
 
                                     return (
                                         <div className='flex items-center space-x-2 my-2'>
