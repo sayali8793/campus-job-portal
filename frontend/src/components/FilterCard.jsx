@@ -15,7 +15,10 @@ const fitlerData = [
     },
     {
         fitlerType: "Salary",
-        array: ["1lakh to 5lakh", "5 lakh to 10 lakh", "11 lakh to 15 lakh"]
+        // array: ["1lakh to 5lakh", "5 lakh to 10 lakh", "11 lakh to 15 lakh"]
+         array : [{ label: "1L - 5L", min: 1, max: 5 },
+      { label: "5L - 10L", min: 5, max: 10 },
+      { label: "10L - 15L", min: 10, max: 15 }]
     },
 ]
 
