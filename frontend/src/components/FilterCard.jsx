@@ -55,7 +55,7 @@ const FilterCard = () => {
                                     return (
                                         <div className='flex items-center space-x-2 my-2'>
                                             <RadioGroupItem value={item} id={itemId} />
-                                            <Label htmlFor={itemId}>{item}</Label>
+                                            <Label htmlFor={itemId}> {data.fitlerType === "Salary" ? `${item} LPA` : item}</Label>
                                         </div>
                                     )
                                 })
