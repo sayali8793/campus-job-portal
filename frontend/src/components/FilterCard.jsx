@@ -4,6 +4,7 @@ import { Label } from './ui/label'
 import { useDispatch } from 'react-redux'
 import { setSearchedQuery } from '@/redux/jobSlice'
 
+
 const fitlerData = [
     {
         fitlerType: "Location",
@@ -42,8 +43,8 @@ const FilterCard = () => {
                                 data.array.map((item, idx) => {
                                     const itemId = `id${index}-${idx}`
 
-                                    if (searchedQuery.includes("-")) {
-                                        const [min, max] = searchedQuery.split("-").map(Number);
+                                    if (selectedValue.includes("-")) {
+                                        const [min, max] = selectedValue.split("-").map(Number);
                                          return job.salary >= min && job.salary <= max;
                                     }
 
