@@ -21,6 +21,7 @@ const fitlerData = [
     },
 ]
 
+const { searchedQuery } = useSelector((store) => store.job);
 const FilterCard = () => {
     const [selectedValue, setSelectedValue] = useState('');
     const dispatch = useDispatch();
@@ -43,7 +44,13 @@ const FilterCard = () => {
                                 data.array.map((item, idx) => {
                                     const itemId = `id${index}-${idx}`
 
-                                    
+                                    if (searchedQuery?.includes("-")) {
+            const [min, max] = searchedQuery.split("-").map(Number);
+
+            // extract number from text salary
+            const salary = parseInt(job.salary);  
+
+            return salary >= min && salary <= max;}
 
                                     return (
                                         <div className='flex items-center space-x-2 my-2'>
