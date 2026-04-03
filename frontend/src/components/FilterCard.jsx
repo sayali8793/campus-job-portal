@@ -45,6 +45,17 @@ const FilterCard = () => {
                             {
                                 data.array.map((item, idx) => {
                                     const itemId = `id${index}-${idx}`
+
+                                    const value =
+                                        data.fitlerType === "Salary"
+                                            ? JSON.stringify(item)
+                                            : item;
+
+                                    const label =
+                                        data.fitlerType === "Salary"
+                                            ? item.label
+                                            : item;
+
                                     return (
                                         <div className='flex items-center space-x-2 my-2'>
                                             <RadioGroupItem value={item} id={itemId} />
