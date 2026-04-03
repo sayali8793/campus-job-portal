@@ -17,7 +17,7 @@ export const register = async (req, res) => {
         };
         const file = req.file;
         const fileUri = getDataUri(file);
-        const cloudResponse = await cloudinary.uploader.upload(fileUri.content);
+        const cloudResponse = await cloudinary.uploader.upload(fileUri.content,{resource_type: "auto"});
 
         const user = await User.findOne({ email });
         if (user) {
