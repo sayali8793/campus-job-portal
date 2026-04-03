@@ -15,12 +15,8 @@ const fitlerData = [
     },
     {
         fitlerType: "Salary",
-        // array: ["1lakh to 5lakh", "5 lakh to 10 lakh", "11 lakh to 15 lakh"]
-        array: [
-      { label: "1L - 5L", min: 1, max: 5 },
-      { label: "5L - 10L", min: 5, max: 10 },
-      { label: "10L - 15L", min: 10, max: 15 }
-    ]
+        array: ["1-5", "5-10", "11-15"]
+        
     },
 ]
 
@@ -46,15 +42,10 @@ const FilterCard = () => {
                                 data.array.map((item, idx) => {
                                     const itemId = `id${index}-${idx}`
 
-                                    const value =
-                                        data.fitlerType === "Salary"
-                                            ? JSON.stringify(item)
-                                            : item;
-
-                                    const label =
-                                        data.fitlerType === "Salary"
-                                            ? item.label
-                                            : item;
+                                    if (searchedQuery.includes("-")) {
+                                        const [min, max] = searchedQuery.split("-").map(Number);
+                                         return job.salary >= min && job.salary <= max;
+                                    }
 
                                     return (
                                         <div className='flex items-center space-x-2 my-2'>
